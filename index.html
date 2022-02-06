@@ -27,12 +27,12 @@
         background             white
      -->
     <h1 class="heading1">Search Results Viewer</h1>
-    <section class="border border-dark">
-        <div class="text-green" id="urlShow"></div>
-        <div class="text-blue" id="titleShow"></div>
-        <div class="text-dark" id="descriptionShow"></div>
+    <section class="border border-dark m-3 p-3">
+        <div class="text-success" id="urlShow">https://github.com/pkkrsingh877/Search-Results-Viewer</div>
+        <div class="text-primary fs-4" id="titleShow">Welcome to github</div>
+        <div class="text-dark" id="descriptionShow">Help people interested in this repository understand your project by adding a README.</div>
     </section>
-    <form class="form-control">
+    <form class="form-control m-3 p-3">
         <div class="mb-3">
             <label for="title">Title: </label>
             <input type="text" placeholder="title" name="title" id="title">
@@ -45,6 +45,23 @@
             <label for="description">Meta Description: </label>
             <input type="text" placeholder="description" name="description" id="description">
         </div>
+        <button class="btn btn-success" id="btn">View</button>
     </form>
+    <script>
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            let urlShow = document.querySelector('#urlShow');
+            let titleShow = document.querySelector('#titleShow');
+            let descriptionShow = document.querySelector('#descriptionShow');
+            const title = document.querySelector('#title');
+            const description = document.querySelector('#description');
+            const url = document.querySelector('#url');
+            titleShow.innerText = title.value;
+            descriptionShow.innerText = description.value;
+            urlShow.innerText = url.value;
+        });
+    </script>
 </body>
 </html>
+
