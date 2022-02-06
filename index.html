@@ -20,30 +20,29 @@
         rel="stylesheet" />
 </head>
 <body>
-    <!-- 
-        link                   dark green
-        title                  navy blue
-        meta description       light black
-        background             white
-     -->
+    <style>
+        body {
+            font-family: "Open Sans";
+        }
+    </style>
     <h1 class="heading1">Search Results Viewer</h1>
-    <section class="border border-dark m-3 p-3">
+    <section class="border border-dark m-3 p-3 overflow-scroll">
         <div class="text-success" id="urlShow">https://github.com/pkkrsingh877/Search-Results-Viewer</div>
         <div class="text-primary fs-4" id="titleShow">Welcome to github</div>
         <div class="text-dark" id="descriptionShow">Help people interested in this repository understand your project by adding a README.</div>
     </section>
-    <form class="form-control m-3 p-3">
-        <div class="mb-3">
+    <form class="m-3 p-3 bg-dark text-light">
+        <div class="mb-3 form-group">
             <label for="title">Title: </label>
-            <input type="text" placeholder="title" name="title" id="title">
+            <input type="text" class="form-control" placeholder="title" name="title" id="title">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 form-group">
             <label for="url">URL: </label>
-            <input type="text" placeholder="url" name="url" id="url">
+            <input type="text" class="form-control" placeholder="url" name="url" id="url">
         </div>
-        <div class="">
+        <div class="mb-3 form-group">
             <label for="description">Meta Description: </label>
-            <input type="text" placeholder="description" name="description" id="description">
+            <input type="text" class="form-control" placeholder="description" name="description" id="description">
         </div>
         <button class="btn btn-success" id="btn">View</button>
     </form>
